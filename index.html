@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>UROP Application: Isha Madey</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f0f4f8;
+      padding: 0 60px;
+      font-family: 'Inter', sans-serif;
+    }
+    h1 {
+      font-size: 2 em;
+    }
+    h4 {
+      font-size: 1em;
+    }
+    p {
+      font-size: 1em;
+      margin-bottom: 16px;
+    }
+    img {
+      float: right;
+      margin-left: 20px;
+      margin-bottom: 10px;
+      margin-top: 20px;
+    }
+    header {
+      text-align: center;
+      background-color: #e8edf2;
+      color: #1a2e4a;
+      padding: 20px 14px 12px 14px;
+      border-bottom: 1px solid #1a2e4a;
+    }
+    .tablink {
+      margin-top: 20px;
+      background-color: #1a2e4a;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      margin-bottom: 20px;
+      margin-right: 6px;
+    }
+    .tablink:hover {
+      background-color: #2a4a7a;
+    }
+    .tabcontent {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="tablink" onclick="openPage('home', this)" id="defaultOpen">Home</button>
+  <button class="tablink" onclick="openPage('redesign', this)">LobbyView Redesign Brainstorm</button>
+
+  <!-- HOME TAB -->
+  <div id="home" class="tabcontent">
+    <header>
+      <h1>LobbyView</h1>
+      <h4><em>Advancing data science research in interest group politics</em></h4>
+    </header>
+
+    <img src="https://lobbyview.org/static/4a265c0a9c986929ad73e59916b78103/bc3e6/graph-nobackground.webp" alt="LobbyView graph" width="160" height="130">
+
+    <p>Hi! My name is <em>Isha Madey.</em></p>
+    <p>I am interested in science policy, particularly how political tactics like lobbying impact grant funding. I would love to explore the extensive datasets LobbyView offers as I help redesign the public-facing website.</p>
+    <p>Prior to seeing this role, my goal for the summer was to develop my programming and website creation skills, since I feel programming proficiency in HTML and JavaScript is particularly useful in any role. This UROP extends my capabilities of learning website development by offering a directed project to develop my skills with an experienced web developer to provide guidance.</p>
+    <p><strong>I can dedicate the time and effort to develop these skills beyond this example website I drafted in response to the UROP position with the mission to effectively communicate <a href="https://lobbyview.org">LobbyView</a> to the public.</strong></p>
+  </div>
+
+  <!-- REDESIGN TAB -->
+  <div id="redesign" class="tabcontent">
+    <header>
+      <h1>LobbyView  Brainstorm</h1>
+    </header>
+    <p>Some initial questions I'd love to explore with the team:</p>
+    <p> What is the current distinction between the visualizations and advanced search tab?</p>
+    <p> In the Advanced Search tab, are the two filtering sections intended for different use cases? I wondered whether separating them might make each more intuitive for the user.</p>
+  </div>
+
+  <script>
+    function openPage(pageName, button) {
+      const tabs = document.getElementsByClassName("tabcontent");
+      for (let i = 0; i < tabs.length; i++) {
+        tabs[i].style.display = "none";
+      }
+      document.getElementById(pageName).style.display = "block";
+    }
+    document.getElementById("defaultOpen").click();
+  </script>
+
+</body>
+</html>
